@@ -34,7 +34,7 @@
         $user = getenv('MYSQL_USER');
         $password = getenv('MYSQL_PASSWORD');
         $database = getenv('MYSQL_DATABASE');
-        $conexion = mysqli_connect($host,$user,$password, "SG");
+        $conexion = mysqli_connect($host,$user,$password, $database);
 
         $cadenaSQL = "select * from s_customer";
         $resultado = mysqli_query($conexion, $cadenaSQL);
